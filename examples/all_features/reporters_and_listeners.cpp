@@ -38,6 +38,8 @@ struct MyXmlReporter : public IReporter
     void test_run_end(const TestRunStats& /*in*/) override {}
 
     void test_case_start(const TestCaseData& in) override { tc = &in; }
+    
+    void test_case_reenter(const TestCaseData& /*in*/) override {}
 
     void test_case_end(const CurrentTestCaseStats& /*in*/) override {}
 
@@ -78,3 +80,6 @@ struct MyXmlReporter : public IReporter
 
 // "1" is the priority - used for ordering when multiple reporters/listeners are used
 REGISTER_REPORTER("my_xml", 1, MyXmlReporter);
+
+// registering the same class as a reporter and as a listener is nonsense but it's possible
+REGISTER_LISTENER("my_listener", 1, MyXmlReporter);

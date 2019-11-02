@@ -11,7 +11,7 @@
 - doesn't drag any headers when included (except for in the translation unit where the library gets implemented)
 - everything is in the ```doctest``` namespace (and the implementation details are in a nested ```detail``` namespace)
 - all macros have prefixes - some by default have unprefixed versions as well but that is optional - see [**configuration**](configuration.md)
-- 0 warnings even with the most aggresive flags (on all tested compilers!!!)
+- 0 warnings even with the most aggressive flags (on all tested compilers!!!)
 	- ```-Weverything -pedantic``` for **clang**
 	- ```-Wall -Wextra -pedantic``` and **>> over 35 <<** other warnings **not** covered by these flags for **GCC**!!! - see [**here**](../../scripts/cmake/common.cmake#L84)
 	- ```/Wall``` for **MSVC** (except for: ```C4514```, ```C4571```, ```C4710```, ```C4711```)
@@ -27,7 +27,7 @@
 - tested with **MSVC**: **2015**, **2017**, **2019** (also in 32 bit mode)
 - per-commit tested on [**travis**](https://travis-ci.org/onqtam/doctest) and [**appveyor**](https://ci.appveyor.com/project/onqtam/doctest) CI services
 	- warnings as errors even on the most aggressive warning levels - see [**here**](../../scripts/cmake/common.cmake#L84)
-    - statically analyzed on the CI - [**Cppcheck**](http://cppcheck.sourceforge.net/) / [**Clang-Tidy**](http://oclint.org/) / [**Coverity Scan**](https://scan.coverity.com/) / [**OCLint**](https://scan.coverity.com/) / [**Visual Studio Analyzer**](https://docs.microsoft.com/en-us/visualstudio/code-quality/analyzing-c-cpp-code-quality-by-using-code-analysis)
+	- statically analyzed on the CI - [**Cppcheck**](http://cppcheck.sourceforge.net/) / [**Clang-Tidy**](https://clang.llvm.org/extra/clang-tidy/) / [**Coverity Scan**](https://scan.coverity.com/) / [**OCLint**](http://oclint.org/) / [**Visual Studio Analyzer**](https://docs.microsoft.com/en-us/visualstudio/code-quality/analyzing-c-cpp-code-quality-by-using-code-analysis)
 	- all tests have their output compared to reference output of a previous known good run
 	- all tests built and ran in **Debug**/**Release** modes
 	- all tests ran through **valgrind** under **Linux** (sadly [not under OSX](https://github.com/onqtam/doctest/issues/11))

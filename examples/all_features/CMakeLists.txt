@@ -65,7 +65,8 @@ doctest_add_test(NAME all_binary  ${common_args} -tc=all?binary* -s) # print all
 doctest_add_test(NAME abort_after ${common_args} -aa=2 -e=off   -sf=*coverage*) # abort after 2 assert fails and parse a negative
 doctest_add_test(NAME first_last  ${common_args} -f=2 -l=4      -sf=*coverage*) # run a range
 doctest_add_test(NAME filter_1    ${common_args} -ts=none) # should filter out all
-doctest_add_test(NAME filter_2    COMMAND $<TARGET_FILE:all_features>   -tse=* -nv) # should filter out all + print skipped
+# -order-by=name to avoid different output depending on the compiler used. See https://github.com/onqtam/doctest/issues/287
+doctest_add_test(NAME filter_2    COMMAND $<TARGET_FILE:all_features>   -tse=* -nv -order-by=name) # should filter out all + print skipped
 doctest_add_test(NAME filter_3    ${common_args} -sc=from*,sc* -sce=sc2 -sf=*subcases*) # enter a specific subcase - sc1
 doctest_add_test(NAME order_1     ${common_args} -ob=suite -ns          -sf=*test_cases_and_suites*)
 doctest_add_test(NAME order_2     ${common_args} -ob=name               -sf=*test_cases_and_suites*)
@@ -90,7 +91,9 @@ if(MSVC)
     target_compile_options(disabled PRIVATE /wd4505) # unreferenced local function has been removed
     target_compile_options(disabled PRIVATE /wd4100) # unreferenced formal parameter
     target_compile_options(disabled PRIVATE /wd4189) # local variable is initialized but not referenced
-elseif(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+endif()
+
+if(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
     target_compile_options(disabled PRIVATE -Wno-unknown-warning-option)
     target_compile_options(disabled PRIVATE -Wno-unneeded-internal-declaration)
     target_compile_options(disabled PRIVATE -Wno-unused-function)

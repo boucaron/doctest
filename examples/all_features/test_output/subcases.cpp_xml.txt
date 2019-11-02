@@ -142,6 +142,9 @@ root
             </Expanded>
           </Expression>
         </SubCase>
+        <Exception crash="false">
+          exception thrown in subcase - will translate later when the whole test case has been exited (cannot translate while there is an active exception)
+        </Exception>
       </SubCase>
       <Exception crash="false">
         failure... but the show must go on!
@@ -157,14 +160,36 @@ root
             </Expanded>
           </Expression>
         </SubCase>
+        <Exception crash="false">
+          exception thrown in subcase - will translate later when the whole test case has been exited (cannot translate while there is an active exception)
+        </Exception>
       </SubCase>
       <Exception crash="false">
         failure... but the show must go on!
       </Exception>
       <OverallResultsAsserts successes="0" failures="2"/>
     </TestCase>
+    <TestCase name="Nested - related to https://github.com/onqtam/doctest/issues/282" filename="subcases.cpp" line="0">
+      <SubCase name="generate data variant 1" filename="subcases.cpp" line="0">
+        <SubCase name="check data 1" filename="subcases.cpp" line="0">
+        </SubCase>
+      </SubCase>
+      <SubCase name="generate data variant 1" filename="subcases.cpp" line="0">
+        <SubCase name="check data 2" filename="subcases.cpp" line="0">
+        </SubCase>
+      </SubCase>
+      <SubCase name="generate data variant 1" filename="subcases.cpp" line="0">
+        <SubCase name="check data 1" filename="subcases.cpp" line="0">
+        </SubCase>
+      </SubCase>
+      <SubCase name="generate data variant 1" filename="subcases.cpp" line="0">
+        <SubCase name="check data 2" filename="subcases.cpp" line="0">
+        </SubCase>
+      </SubCase>
+      <OverallResultsAsserts successes="4" failures="0"/>
+    </TestCase>
   </TestSuite>
-  <OverallResultsAsserts successes="15" failures="6"/>
-  <OverallResultsTestCases successes="1" failures="4"/>
+  <OverallResultsAsserts successes="19" failures="6"/>
+  <OverallResultsTestCases successes="2" failures="4"/>
 </doctest>
 Program code.

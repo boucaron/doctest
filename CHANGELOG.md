@@ -1,5 +1,66 @@
 # Change Log
 
+## [2.3.5](https://github.com/onqtam/doctest/tree/2.3.5) (2019-09-22)
+[Full Changelog](https://github.com/onqtam/doctest/compare/2.3.4...2.3.5)
+
+**Closed issues:**
+
+- \[feature request\] Assertion macros for throwing exception of a specific type with message - \<LEVEL\>\_THROWS\_WITH\_AS\(expr, string, ex\_type\) [\#295](https://github.com/onqtam/doctest/issues/295)
+- CHECK\_THROWS\_AS of non-default constructor wants to call default constructor [\#293](https://github.com/onqtam/doctest/issues/293)
+- Typos and spelling errors in source, documentation and scripts [\#291](https://github.com/onqtam/doctest/issues/291)
+- Customize test names / variable substitution [\#284](https://github.com/onqtam/doctest/issues/284)
+- SUBCASE in function not behaving as expected [\#282](https://github.com/onqtam/doctest/issues/282)
+- SUPER\_FAST\_ASSERTS fails to compile CHECK\_MESSAGE [\#281](https://github.com/onqtam/doctest/issues/281)
+- CHECK\_MESSAGE no longer works with DOCTEST\_CONFIG\_SUPER\_FAST\_ASSERTS [\#280](https://github.com/onqtam/doctest/issues/280)
+- CAPTURE of structured binding element no longer works [\#279](https://github.com/onqtam/doctest/issues/279)
+- Reporter: `test\_case\_end` no longer fired after test case restart [\#278](https://github.com/onqtam/doctest/issues/278)
+- Add debug break override support [\#277](https://github.com/onqtam/doctest/issues/277)
+- Running tests from within Visual Studio in a static lib project [\#275](https://github.com/onqtam/doctest/issues/275)
+- Compile-time error when using a raw string literal inside of REQUIRE \(MSVC 2017\) [\#274](https://github.com/onqtam/doctest/issues/274)
+- Give example for having tests in production code [\#252](https://github.com/onqtam/doctest/issues/252)
+- Memory leaks just by including doctest.h [\#205](https://github.com/onqtam/doctest/issues/205)
+- Feature request: print subcase when an exception is thrown inside one [\#136](https://github.com/onqtam/doctest/issues/136)
+
+**Merged pull requests:**
+
+- Fix typos and misspellings found by codespell. [\#292](https://github.com/onqtam/doctest/pull/292) ([warmsocks](https://github.com/warmsocks))
+- Document order by issue correctly [\#290](https://github.com/onqtam/doctest/pull/290) ([DaanDeMeyer](https://github.com/DaanDeMeyer))
+- Document that -order-by=file is compiler-dependent [\#289](https://github.com/onqtam/doctest/pull/289) ([DaanDeMeyer](https://github.com/DaanDeMeyer))
+- Add -order-by=name to filter\_2 test [\#288](https://github.com/onqtam/doctest/pull/288) ([DaanDeMeyer](https://github.com/DaanDeMeyer))
+- Add support for compiling with clang-cl [\#286](https://github.com/onqtam/doctest/pull/286) ([DaanDeMeyer](https://github.com/DaanDeMeyer))
+- No minimum version limitation of Meson [\#283](https://github.com/onqtam/doctest/pull/283) ([ydm](https://github.com/ydm))
+
+## [2.3.4](https://github.com/onqtam/doctest/tree/2.3.4) (2019-08-12)
+[Full Changelog](https://github.com/onqtam/doctest/compare/2.3.3...2.3.4)
+
+**Closed issues:**
+
+- Remove INFO\(\) limitation for using only lvalues and no rvalues [\#269](https://github.com/onqtam/doctest/issues/269)
+- Compile error on MAC OS with AppleClang 8.0.0.8000042  [\#266](https://github.com/onqtam/doctest/issues/266)
+- Throwing exception in a mocked method [\#265](https://github.com/onqtam/doctest/issues/265)
+- Illegal syntax for decorators compiles and runs without warning, but has no effect [\#264](https://github.com/onqtam/doctest/issues/264)
+- Support conditional expressions in REQUIRE [\#262](https://github.com/onqtam/doctest/issues/262)
+- Register a listener\(reporter\) that always listens [\#257](https://github.com/onqtam/doctest/issues/257)
+- Memory sanitizer complaint [\#255](https://github.com/onqtam/doctest/issues/255)
+- Windows Clang GNU command line warnings [\#253](https://github.com/onqtam/doctest/issues/253)
+- The build writes into the source directory [\#249](https://github.com/onqtam/doctest/issues/249)
+- How to enable tests inside another exe [\#246](https://github.com/onqtam/doctest/issues/246)
+- Testing multiple headers. [\#244](https://github.com/onqtam/doctest/issues/244)
+- CMakeLists.txt: Needs CMAKE\_CXX\_STANDARD=11 [\#243](https://github.com/onqtam/doctest/issues/243)
+- \[bug\] Can't compile the tests because of mutex, that is declared in the doctest [\#242](https://github.com/onqtam/doctest/issues/242)
+
+**Merged pull requests:**
+
+- Improve Listener docs [\#273](https://github.com/onqtam/doctest/pull/273) ([claremacrae](https://github.com/claremacrae))
+- Rework `INFO` lazy evaluation to use lambdas. [\#270](https://github.com/onqtam/doctest/pull/270) ([DaanDeMeyer](https://github.com/DaanDeMeyer))
+- Prevent compile errors with AppleClang compiler [\#268](https://github.com/onqtam/doctest/pull/268) ([ClausKlein](https://github.com/ClausKlein))
+- Revert "fix : includeing windows.h header caause error" [\#263](https://github.com/onqtam/doctest/pull/263) ([onqtam](https://github.com/onqtam))
+- Fix static analyzer URLs [\#259](https://github.com/onqtam/doctest/pull/259) ([godbyk](https://github.com/godbyk))
+- fix : includeing windows.h header caause error [\#258](https://github.com/onqtam/doctest/pull/258) ([rinechran](https://github.com/rinechran))
+- only look for C++ compiler with CMake [\#256](https://github.com/onqtam/doctest/pull/256) ([zhihaoy](https://github.com/zhihaoy))
+- Fix \#253 [\#254](https://github.com/onqtam/doctest/pull/254) ([DaanDeMeyer](https://github.com/DaanDeMeyer))
+- add alias target for doctest for use in build tree [\#247](https://github.com/onqtam/doctest/pull/247) ([trondhe](https://github.com/trondhe))
+
 ## [2.3.3](https://github.com/onqtam/doctest/tree/2.3.3) (2019-06-02)
 [Full Changelog](https://github.com/onqtam/doctest/compare/2.3.2...2.3.3)
 
@@ -10,7 +71,6 @@
 - Splitting templated test across different translation units [\#238](https://github.com/onqtam/doctest/issues/238)
 - Compile errors with iosfwd.h and Visual Studio 2019 Preview [\#183](https://github.com/onqtam/doctest/issues/183)
 - Add CMake test support as catch\_discover\_tests\(\) in Catch2 [\#171](https://github.com/onqtam/doctest/issues/171)
-- Doctest is not able to compile on OSX [\#126](https://github.com/onqtam/doctest/issues/126)
 
 **Merged pull requests:**
 
@@ -50,10 +110,6 @@
 ## [2.3.1](https://github.com/onqtam/doctest/tree/2.3.1) (2019-03-24)
 [Full Changelog](https://github.com/onqtam/doctest/compare/2.3.0...2.3.1)
 
-**Closed issues:**
-
-- CMake config deletes doctest.h on clean [\#210](https://github.com/onqtam/doctest/issues/210)
-
 **Merged pull requests:**
 
 - Add two very simple examples of using doctest with CMake [\#209](https://github.com/onqtam/doctest/pull/209) ([pr0g](https://github.com/pr0g))
@@ -82,7 +138,7 @@
 
 - Fix unmatched bracket in DOCTEST\_TEST\_CASE\_CLASS [\#204](https://github.com/onqtam/doctest/pull/204) ([patstew](https://github.com/patstew))
 - Template apply [\#203](https://github.com/onqtam/doctest/pull/203) ([zhihaoy](https://github.com/zhihaoy))
-- No undefined behavior per C++ standard in detecting endianess. [\#195](https://github.com/onqtam/doctest/pull/195) ([dimztimz](https://github.com/dimztimz))
+- No undefined behavior per C++ standard in detecting endianness. [\#195](https://github.com/onqtam/doctest/pull/195) ([dimztimz](https://github.com/dimztimz))
 - Fix propagating include directories of target doctest\_with\_main [\#193](https://github.com/onqtam/doctest/pull/193) ([dimztimz](https://github.com/dimztimz))
 -  Move single header to a separate folder [\#187](https://github.com/onqtam/doctest/pull/187) ([dimztimz](https://github.com/dimztimz))
 - Fix Clang format to handle C++11 [\#186](https://github.com/onqtam/doctest/pull/186) ([dimztimz](https://github.com/dimztimz))
@@ -224,7 +280,7 @@
 - Nullptr issue. [\#110](https://github.com/onqtam/doctest/issues/110)
 - MemorySanitizer: use-of-uninitialized-value [\#109](https://github.com/onqtam/doctest/issues/109)
 - Potential memory leak through scan-build [\#108](https://github.com/onqtam/doctest/issues/108)
-- Warnings raised to error with lastest MSVC version [\#107](https://github.com/onqtam/doctest/issues/107)
+- Warnings raised to error with latest MSVC version [\#107](https://github.com/onqtam/doctest/issues/107)
 - New solution for tests in static libraries ! \(MSVC\) [\#106](https://github.com/onqtam/doctest/issues/106)
 - Command line flags do not work after code formatter/beautifier [\#104](https://github.com/onqtam/doctest/issues/104)
 - Cppcheck 1.81 warnings [\#102](https://github.com/onqtam/doctest/issues/102)
@@ -396,7 +452,7 @@
 
 **Merged pull requests:**
 
-- dont show green when tests fail [\#26](https://github.com/onqtam/doctest/pull/26) ([ferkulat](https://github.com/ferkulat))
+- don't show green when tests fail [\#26](https://github.com/onqtam/doctest/pull/26) ([ferkulat](https://github.com/ferkulat))
 - Include "program code" in example [\#15](https://github.com/onqtam/doctest/pull/15) ([martinmoene](https://github.com/martinmoene))
 
 ## [1.0.0](https://github.com/onqtam/doctest/tree/1.0.0) (2016-05-22)

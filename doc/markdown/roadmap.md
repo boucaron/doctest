@@ -5,7 +5,7 @@ This library is free, and will stay free but needs your support to sustain its d
 [![Patreon](https://cloud.githubusercontent.com/assets/8225057/5990484/70413560-a9ab-11e4-8942-1a63607c0b00.png)](http://www.patreon.com/onqtam)
 [![PayPal](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.me/onqtam/10)
 
-Planned features for future releases - order changes constantly...
+Planned features for future releases - order changes constantly... Also look through the [**issues**](https://github.com/onqtam/doctest/issues).
 
 ### For 2.4:
 
@@ -143,7 +143,7 @@ Planned features for future releases - order changes constantly...
 
 - rethink static code analysis suppressions - users shouldn't have to use the same flags for code which uses doctest macros/types
 - move the "react()" part (the one that throws for REQUIRE asserts - or for when "abort-after=<int>" is reached) to a function call in the while() part of the asserts
-- stop using underscores for the begining of identifiers - the anonymous variables - against the standard...
+- stop using underscores for the beginning of identifiers - the anonymous variables - against the standard...
 - templated fixture test cases
 - test with missed warning flags for GCC
     - https://github.com/Barro/compiler-warnings
